@@ -23,21 +23,29 @@ while True:
 
     keys = pygame.key.get_pressed()
     if keys[pygame.K_d]:
-        x1 += speed
+        if x1 < 750:
+            x1 += speed
     if keys[pygame.K_a]:
-        x1 -= speed
+        if x1 > 0:
+            x1 -= speed
     if keys[pygame.K_w]:
-        y1 -= speed
+        if y1 > 0:
+            y1 -= speed
     if keys[pygame.K_s]:
-        y1 += speed
+        if y1 < 450:
+            y1 += speed
     if keys[pygame.K_RIGHT]:
-        x2 += speed
+        if x2 < 750:
+            x2 += speed
     if keys[pygame.K_LEFT]:
-        x2 -= speed
+        if x2 > 0:
+            x2 -= speed
     if keys[pygame.K_UP]:
-        y2 -= speed
+        if y2 > 0:
+            y2 -= speed
     if keys[pygame.K_DOWN]:
-        y2 += speed
+        if y2 < 450:
+            y2 += speed
 
 
     window.blit(fon_image , [0 , 0 ])
